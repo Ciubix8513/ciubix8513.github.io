@@ -15,9 +15,17 @@ html {
   a:visited {
     color: #ffadff;
   }
+
+  body {
+    background-color: #302d39;
+  }
 }
 
 @media (prefers-color-scheme: light) {
+  html {
+    background-color: #EBEBEB
+  }
+
   a:link {
     color: #0000ee;
   }
@@ -25,16 +33,35 @@ html {
   a:visited {
     color: #551a8b;
   }
-}
 
+  body {
+    background-color: #E0E0E0;
+  }
+}
 
 body {
   font-family: "Roboto", sans-serif;
+  /* centering */
   margin: 0 auto;
-  margin-top: 1%;
-  width: fit-content;
+  /* alignment */
+  padding: 20pt;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  margin-left: 20%;
+  margin-right: 20%;
+  /* rounded corners */
+  border-radius: 20px;
 }
 
+/* this is below body so that it can overwrite it */
+@media (max-aspect-ratio: 0.8) {
+  body {
+    margin-left: 1%;
+    margin-right: 1%;
+    margin-top: 1%;
+    margin-bottom: 1%;
+  }
+}
 
 h1 {
   font-size: 50px;
